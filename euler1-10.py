@@ -1,7 +1,7 @@
 import math
 import itertools
 
-# Euler Project number 1: get all numbers less than 1000
+# Euler Project number 1: get sum of all numbers less than 1000
 # that are divisible by either 3 or 5
 
 # Result = 233168
