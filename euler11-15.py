@@ -204,7 +204,7 @@ def collatz_chain_length(x):
 
 print(max(range(1, 1000000), key=collatz_chain_length))
 
-# Euler Project number 15: Find the number of "lattice paths"
+# Euler Project number 15: find the number of "lattice paths"
 # through a 20x20 grid
 
 # Result = 137846528820
