@@ -87,7 +87,6 @@ f = 1
 while True:
     f = fibs[index - 1] + fibs[index - 2]
     if len(str(f)) == 1000:
-        print(f)
         print(index)
         break
     index += 1
