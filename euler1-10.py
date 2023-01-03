@@ -28,7 +28,7 @@ print(sum([f for f in fibs if f % 2 == 0]))
 
 # Result = 6857
 
-maxPrime = -1
+maxPrime = 0
 
 n = 600851475143
 
