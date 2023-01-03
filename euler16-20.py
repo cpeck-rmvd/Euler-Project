@@ -1,7 +1,7 @@
 import math
 import datetime
 
-# Euler Project number 16: find the sum of the digits of 2^1000000
+# Euler Project number 16: find the sum of the digits of 2^1000
 
 # Result = 1366
 
