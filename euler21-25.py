@@ -81,6 +81,8 @@ print("".join(str(x) for x in next(temp)))
 
 # Project Euler number 25: find the first fibonnacci number with 1000 digits
 
+# Result = 4782
+
 fibs = [0, 1]
 index = 2
 f = 1
