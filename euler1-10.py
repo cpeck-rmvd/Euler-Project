@@ -1,6 +1,18 @@
 import math
 import itertools
 
+# Decorator to print the runtime of a function
+
+from time import monotonic
+
+def record_time(function):
+    def wrap(*args, **kwargs):
+        start_time = monotonic()
+        function_return = function(*args, **kwargs)
+        print(f"Run time {monotonic() - start_time} seconds")
+        return function_return
+    return wrap
+
 # Euler Project number 1: get sum of all numbers less than 1000
 # that are divisible by either 3 or 5
 
@@ -162,4 +174,3 @@ while i < n:
 		arr[i]='p'
 	i += 1
 print(sum(k for k in range(len(arr)) if arr[k] == 'p'))
-

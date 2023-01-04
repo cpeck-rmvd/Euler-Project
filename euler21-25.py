@@ -1,6 +1,18 @@
 from sympy import divisors
 import itertools
 
+# Decorator to print the runtime of a function
+
+from time import monotonic
+
+def record_time(function):
+    def wrap(*args, **kwargs):
+        start_time = monotonic()
+        function_return = function(*args, **kwargs)
+        print(f"Run time {monotonic() - start_time} seconds")
+        return function_return
+    return wrap
+
 # Euler Project number 21: find the sum of all "amicable numbers" below 10000
 # If m is the sum n's divisors, and the sum of m's divisors is n, then m, n are amicable.
 

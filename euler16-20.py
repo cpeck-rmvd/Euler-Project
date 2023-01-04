@@ -1,6 +1,18 @@
 import math
 import datetime
 
+# Decorator to print the runtime of a function
+
+from time import monotonic
+
+def record_time(function):
+    def wrap(*args, **kwargs):
+        start_time = monotonic()
+        function_return = function(*args, **kwargs)
+        print(f"Run time {monotonic() - start_time} seconds")
+        return function_return
+    return wrap
+
 # Euler Project number 16: find the sum of the digits of 2^1000
 
 # Result = 1366

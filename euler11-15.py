@@ -2,6 +2,18 @@ import math
 import itertools
 import functools
 
+# Decorator to print the runtime of a function
+
+from time import monotonic
+
+def record_time(function):
+    def wrap(*args, **kwargs):
+        start_time = monotonic()
+        function_return = function(*args, **kwargs)
+        print(f"Run time {monotonic() - start_time} seconds")
+        return function_return
+    return wrap
+
 # Euler Project number 11: Find the greatest product of four adjacent numbers
 # in given 20x20 grid
 
